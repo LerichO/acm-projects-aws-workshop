@@ -25,55 +25,53 @@ function App() {
 
   return (
     <>
-      <h1>Iris Measurement Form</h1>
+      <h1 style={{textAlign:'center'}}>🌸Iris Measurement Form🌸</h1>
       <form onSubmit={handleSubmit} className='form-container'>
-        <div className=''>
-          <label htmlFor="sepalLength">Sepal Length:</label>
-          <input
-            type="number"
-            id="sepalLength"
-            name="sepalLength"
-            value={formData.sepalLength}
-            onChange={handleChange}
-            step="0.1"
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="sepalWidth">Sepal Width:</label>
-          <input
-            type="number"
-            id="sepalWidth"
-            name="sepalWidth"
-            value={formData.sepalWidth}
-            onChange={handleChange}
-            step="0.1"
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="petalLength">Petal Length:</label>
-          <input
-            type="number"
-            id="petalLength"
-            name="petalLength"
-            value={formData.petalLength}
-            onChange={handleChange}
-            step="0.1"
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="petalWidth">Petal Width:</label>
-          <input
-            type="number"
-            id="petalWidth"
-            name="petalWidth"
-            value={formData.petalWidth}
-            onChange={handleChange}
-            step="0.1"
-            required
-          />
+        <div className='form-input'>
+          <div className='form-labels'>
+            <label htmlFor="sepalLength">Sepal Length:</label>
+            <label htmlFor="sepalWidth">Sepal Width:</label>
+            <label htmlFor="petalLength">Petal Length:</label>
+            <label htmlFor="petalWidth">Petal Width:</label>
+          </div>
+          <div className='form-fields'>
+            <input
+              type="number"
+              id="sepalLength"
+              name="sepalLength"
+              value={formData.sepalLength}
+              onChange={handleChange}
+              step="0.1"
+              required
+            />
+            <input
+              type="number"
+              id="sepalWidth"
+              name="sepalWidth"
+              value={formData.sepalWidth}
+              onChange={handleChange}
+              step="0.1"
+              required
+            />
+            <input
+              type="number"
+              id="petalLength"
+              name="petalLength"
+              value={formData.petalLength}
+              onChange={handleChange}
+              step="0.1"
+              required
+            />
+            <input
+              type="number"
+              id="petalWidth"
+              name="petalWidth"
+              value={formData.petalWidth}
+              onChange={handleChange}
+              step="0.1"
+              required
+            />
+          </div>
         </div>
         <button type="submit">Submit</button>
       </form>

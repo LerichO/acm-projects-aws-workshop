@@ -44,6 +44,34 @@
 .form-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.form-labels {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  width: 50%;
+  gap: 10px;
+}
+.form-fields {
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  gap: 10;
+  width: 10%;
+  height: auto;
+}
+
+button {
+  width: 150px;
 }
