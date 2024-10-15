@@ -9,30 +9,34 @@ function App() {
     petalWidth: ''
   })
 
+  const [classification, setClassification] = useState('Flower')
+
   const handleChange = (e) => {
     const { name, value } = e.target
     setFormData(prevData => ({
       ...prevData,
       [name]: value
     }))
+    setClassification('')
   }
 
   const handleSubmit = (e) => {
     e.preventDefault()
     console.log('Form submitted:', formData)
-    // Here you can add logic to handle the submitted data
+    // Add code here to handle logic for submitted data
   }
 
   return (
     <>
-      <h1 style={{textAlign:'center'}}>🌸Iris Measurement Form🌸</h1>
+      <h1>🌸Iris Prediction Form 🌸</h1>
+      <h3>Input a given measurement for each feature for the machine learning model to predict what type of Iris the flower is.</h3>
       <form onSubmit={handleSubmit} className='form-container'>
         <div className='form-input'>
           <div className='form-labels'>
-            <label htmlFor="sepalLength">Sepal Length:</label>
-            <label htmlFor="sepalWidth">Sepal Width:</label>
-            <label htmlFor="petalLength">Petal Length:</label>
-            <label htmlFor="petalWidth">Petal Width:</label>
+            <label htmlFor="sepalLength">Sepal Length (cm):</label>
+            <label htmlFor="sepalWidth">Sepal Width (cm):</label>
+            <label htmlFor="petalLength">Petal Length (cm):</label>
+            <label htmlFor="petalWidth">Petal Width (cm):</label>
           </div>
           <div className='form-fields'>
             <input
@@ -74,7 +78,14 @@ function App() {
           </div>
         </div>
         <button type="submit">Submit</button>
+        <h3>This is a: {classification}</h3>
       </form>
+      <div className="info-container">
+        <h2>The Iris Dataset</h2>
+        <p>The machine learning model which we have built within AWS Sagemaker that this React app is making requests to is trained using the Iris dataset from UC Irvine's Machine Learning Repository <span><a href="https://archive.ics.uci.edu/dataset/53/iris">here</a></span>. Each instance of the dataset consists of 4 features - sepal length, sepal width, petal length, and petal width - with each instance class resolving to a type of iris plant. Features are measured as floating point decimals.</p>
+        <h2>Tutorial Resources</h2>
+        <p>The AWS Sagemaker demo is based on the tutorial linked <span><a href="https://www.youtube.com/watch?v=OfzAl3K0s0U">here</a></span> but further information can be found through other tutorials, like this one <span><a href="https://youtu.be/stD47vPDadI?si=cqwHyunARQn-S8yx">here</a></span>, as well as <span><a href="https://youtu.be/uQc8Itd4UTs?si=MoRiqlK1_NRjRteZ">Amazon's own tutorials</a></span>.</p>
+      </div>
     </>
   )
 }

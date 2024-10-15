@@ -72,6 +72,18 @@
   height: auto;
 }
 
+.info-container{
+  text-align: left;
+  max-width: 700px;
+}
+
 button {
   width: 150px;
+}
+
+h1 {
+  text-align: center;
+}
+h3 {
+  max-width: 700px;
 }
