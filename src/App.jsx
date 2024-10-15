@@ -78,13 +78,13 @@ function App() {
           </div>
         </div>
         <button type="submit">Submit</button>
-        <h3>This is a: {classification}</h3>
+        <h3>I predict that this is a... {classification}</h3>
       </form>
       <div className="info-container">
         <h2>The Iris Dataset</h2>
-        <p>The machine learning model which we have built within AWS Sagemaker that this React app is making requests to is trained using the Iris dataset from UC Irvine's Machine Learning Repository <span><a href="https://archive.ics.uci.edu/dataset/53/iris">here</a></span>. Each instance of the dataset consists of 4 features - sepal length, sepal width, petal length, and petal width - with each instance class resolving to a type of iris plant. Features are measured as floating point decimals.</p>
+        <p>The machine learning model that we have built within AWS Sagemaker, which this React app is making requests to, is trained using the Iris dataset from UC Irvine's Machine Learning Repository <span><a href="https://archive.ics.uci.edu/dataset/53/iris">here</a></span>. Each instance of the dataset consists of 4 features - sepal length, sepal width, petal length, and petal width - with each instance class resolving to a type of iris plant. Features are measured as floating point decimals.</p>
         <h2>Tutorial Resources</h2>
-        <p>The AWS Sagemaker demo is based on the tutorial linked <span><a href="https://www.youtube.com/watch?v=OfzAl3K0s0U">here</a></span> but further information can be found through other tutorials, like this one <span><a href="https://youtu.be/stD47vPDadI?si=cqwHyunARQn-S8yx">here</a></span>, as well as <span><a href="https://youtu.be/uQc8Itd4UTs?si=MoRiqlK1_NRjRteZ">Amazon's own tutorials</a></span>.</p>
+        <p>The AWS Sagemaker model is primarly based on the tutorial demo linked <span><a href="https://www.youtube.com/watch?v=OfzAl3K0s0U">here</a></span> and further information can be found through other tutorials, like this one <span><a href="https://youtu.be/stD47vPDadI?si=cqwHyunARQn-S8yx">here</a></span>, as well as <span><a href="https://youtu.be/uQc8Itd4UTs?si=MoRiqlK1_NRjRteZ">Amazon's own tutorials</a></span>.</p>
       </div>
     </>
   )
