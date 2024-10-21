@@ -1,8 +1,7 @@
-# React + Vite
+# React app for ACM Projects' Fall 2024 AWS Workshop Demo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Download the needed **Iris data set** from UC Irvine's Machine Learning Repository [here](https://archive.ics.uci.edu/dataset/53/iris)
 
-Currently, two official plugins are available:
+Download the **machine learning model notebook** for the AWS Sagemaker example [here](https://bit.ly/acm-aws-demo-notebook)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Further information can be found in the tutorial video [here](https://www.youtube.com/watch?v=OfzAl3K0s0U&ab_channel=Computervisionengineer) that this workshop demo is based on
