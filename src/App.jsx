@@ -46,10 +46,6 @@ function App() {
 
     } catch (error) {
       console.error('Error:', error)
-      // Axios specific error handling
-      const errorMessage = error.response 
-        ? `Error: ${error.response.status} - ${error.response.data}`
-        : 'Failed to get prediction. Please try again.'
       setClassification('Error occurred')
     }
   }
