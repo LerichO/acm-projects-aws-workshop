@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import axios from 'axios'
 import './App.css'
 
 function App() {
@@ -20,10 +21,37 @@ function App() {
     setClassification('')
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log('Form submitted:', formData)
-    // Add code here to handle logic for submitted data
+
+    try {
+      const response = await axios({
+        method: 'post',
+        url: import.meta.env.VITE_AWS_API_BASE_URL,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        data: {
+          x1: parseFloat(formData.sepalLength),
+          x2: parseFloat(formData.sepalWidth),
+          x3: parseFloat(formData.petalLength),
+          x4: parseFloat(formData.petalWidth)
+        }
+      })
+
+      // With axios, the response data is already parsed
+      const flowerTypes = ['Setosa', 'Virginica', 'Versicolor']
+      setClassification(flowerTypes[response.data.prediction] || 'Unknown')
+
+    } catch (error) {
+      console.error('Error:', error)
+      // Axios specific error handling
+      const errorMessage = error.response 
+        ? `Error: ${error.response.status} - ${error.response.data}`
+        : 'Failed to get prediction. Please try again.'
+      setError(errorMessage)
+      setClassification('Error occurred')
+    }
   }
 
   return (
