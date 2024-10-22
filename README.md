@@ -1,5 +1,6 @@
 # ACM Projects' Fall 2024 AWS Workshop Demo
 
+### Resources you'll need as you go through the workshop
 * Download the needed **Iris data set** from UC Irvine's Machine Learning Repository [here](https://archive.ics.uci.edu/dataset/53/iris) and unpack into Jupyter project in AWS SageMaker
 * Download the **machine learning model notebook** example [here](https://bit.ly/acm-aws-demo-notebook)
   * Upload into the SageMaker Jupyter
