@@ -11,6 +11,7 @@ function App() {
   })
 
   const [classification, setClassification] = useState('Flower')
+  const [error, setError] = useState(null)
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -49,7 +50,6 @@ function App() {
       const errorMessage = error.response 
         ? `Error: ${error.response.status} - ${error.response.data}`
         : 'Failed to get prediction. Please try again.'
-      setError(errorMessage)
       setClassification('Error occurred')
     }
   }
